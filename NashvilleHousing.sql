@@ -170,13 +170,13 @@ WITH RowNumCTE AS(
 Select *,
 		ROW_NUMBER() OVER (
 		PARTITION BY ParcelID, 
-								PropertyAddress,
-								Saleprice,
-								SaleDate,
-								LegalReference
-								ORDER BY
-										UniqueID
-										) row_num
+		             PropertyAddress,
+			     Saleprice,
+	    		     SaleDate,
+		             LegalReference
+			     ORDER BY
+			             UniqueID					
+		                     ) row_num
 
 From [portfolio project].dbo.NashvilleHousing
 --order by ParcelID
